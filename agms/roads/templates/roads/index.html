@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.svg' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    
+    <title>Тестовое задание fullstack</title>
+    <style>
+      .map {
+        width: 100%;
+        height: 400px;
+      }
+      #map {
+        position: relative;
+      }
+      #info {
+        position: absolute;
+        height: 1px;
+        width: 1px;
+        z-index: 100;
+      }
+      .tooltip.in {
+        opacity: 1;
+      }
+      .tooltip.top .tooltip-arrow {
+        border-top-color: white;
+      }
+      .tooltip-inner {
+        border: 2px solid white;
+      }
+    </style>
+    <script type="module" crossorigin src="{% static 'index-833666b2.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'index-5c51e096.css' %}">
+  </head>
+  <body>
+    <div id="map">
+        <div id="info"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const roadsUrl = "{% url 'roads' %}";
+        const stationUrlStart = "{% url 'roads_main' %}stations/";
+        const stationUrlEnd = ".json";
+    </script>
+  </body>
+</html>
