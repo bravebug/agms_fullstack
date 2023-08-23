@@ -1,6 +1,8 @@
 # agms_fullstack
 Тестовое задание fullstack
 
+Проект развёрнут по адресу: https://io.org.ru/roads/
+
 django orm не поддерживает работу с моделями без PRIMARY KEY
 
 Пришлось их добавить при копировании таблиц:
